@@ -7,7 +7,9 @@ GitHub builds it and hosts it free on **GitHub Pages** each time you push.
 Portfolio/
 ├── src/
 │   ├── data/portfolio.ts        ← ALL your content (text, projects, links). Edit this file.
+│   ├── pages/                   ← one file per tab: Home, About, Projects, Resume, Contact
 │   ├── components/
+│   │   ├── layout/               ← top-right tab bar (Navbar) + page wrapper
 │   │   ├── ui/                   ← shadcn-style reusable components
 │   │   │   ├── aurora-background.tsx   (the animated hero background)
 │   │   │   ├── demo.tsx                (the component author's demo, not used on the site)
@@ -19,7 +21,7 @@ Portfolio/
 ├── public/                       ← files served as-is: resume.pdf, favicon.svg, CNAME
 ├── tailwind.config.ts            ← includes the aurora animation + color-variable plugin
 ├── components.json               ← shadcn CLI config
-├── deploy.yml                    ← auto-deploy workflow (move it into .github/workflows/, see Step 4)
+├── .github/workflows/deploy.yml  ← auto-deploys to GitHub Pages
 └── old-static-version/           ← the previous plain HTML site, kept for reference
 ```
 
@@ -68,13 +70,7 @@ Open `src/data/portfolio.ts`. Everything on the site comes from there:
 ## Step 4: Put it on GitHub
 
 1. On https://github.com click **+ → New repository**. Name it **`thearisw.github.io`**, set **Public**, don't add a README, click **Create repository**.
-2. **Move the deploy workflow into place** (GitHub only runs workflows from `.github/workflows/`). In PowerShell:
-   ```powershell
-   cd $HOME\Desktop\Portfolio
-   mkdir .github\workflows -Force
-   move deploy.yml .github\workflows\deploy.yml
-   ```
-3. Then push the project:
+2. In PowerShell, from the Portfolio folder:
    ```powershell
    git init
    git add .
@@ -84,9 +80,9 @@ Open `src/data/portfolio.ts`. Everything on the site comes from there:
    git push -u origin main
    ```
    (`node_modules` and `dist` are skipped automatically by `.gitignore`.)
-4. In the repo go to **Settings → Pages**, and under *Build and deployment* set **Source = GitHub Actions**.
-5. Open the **Actions** tab. The "Deploy to GitHub Pages" run takes about a minute. If it ran before you changed the setting and failed, click it → **Re-run all jobs**.
-6. Your site is live at **https://thearisw.github.io**.
+3. In the repo go to **Settings → Pages**, and under *Build and deployment* set **Source = GitHub Actions**.
+4. Open the **Actions** tab. The "Deploy to GitHub Pages" run takes about a minute. If it ran before you changed the setting and failed, click it → **Re-run all jobs**.
+5. Your site is live at **https://thearisw.github.io**.
 
 ## Step 5: Point ariswong.dev at it
 
@@ -115,6 +111,12 @@ DNS takes minutes to a few hours. When **Settings → Pages** says *DNS check su
 **Profile Settings → Pages → Add a domain**, then add the TXT record it gives you. This stops anyone else from claiming your domain on GitHub Pages.
 
 ---
+
+## How the tabs and direct links work
+The tabs (`/about`, `/projects`, `/resume`, `/contact`) are real URLs handled by React Router. GitHub Pages only knows about `index.html`, so `npm run build` also copies it to `404.html`. When someone opens `ariswong.dev/projects` directly, GitHub serves that file and the site then shows the right page. To add a tab, create a page in `src/pages/`, add a `<Route>` in `src/App.tsx`, and add it to the `tabs` list in `src/components/layout/Navbar.tsx`.
+
+## Theme
+The site opens in light mode. Visitors can switch to dark with the moon icon and the site remembers their choice.
 
 ## Updating the site later
 ```powershell

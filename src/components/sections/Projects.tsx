@@ -8,9 +8,9 @@ import { cn } from "@/lib/utils";
 
 export function Projects() {
   return (
-    <section id="projects" className="container py-20 md:py-28">
+    <section className="container pb-20 pt-32 md:pb-28 md:pt-40">
       <SectionHeading
-        index="03 — Projects"
+        index="Projects"
         title="Things I've built"
         subtitle="From chaos-theory cryptography to AI film pipelines and games. More on my GitHub."
       />

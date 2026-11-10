@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "tsc -b && vite build && node -e \"require('fs').copyFileSync('dist/index.html','dist/404.html')\"",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,6 +15,7 @@
     "lucide-react": "^1.70.0",
     "react": "^19.1.10",
     "react-dom": "^19.1.10",
+    "react-router-dom": "^7.18.5",
     "tailwind-merge": "^3.7.0"
   },
   "devDependencies": {

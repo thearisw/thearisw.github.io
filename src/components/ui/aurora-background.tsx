@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   children: ReactNode;
@@ -13,11 +13,24 @@ export const AuroraBackground = ({
   showRadialGradient = true,
   ...props
 }: AuroraBackgroundProps) => {
+  // Perf: only run the (expensive) animation while the hero is actually on screen.
+  const ref = useRef<HTMLDivElement>(null);
+  const [visible, setVisible] = useState(true);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(([e]) => setVisible(e.isIntersecting));
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   return (
     <main>
       <div
+        ref={ref}
+        data-paused={!visible}
         className={cn(
-          "relative flex flex-col  h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg",
+          "group relative flex flex-col  h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg",
           className
         )}
         {...props}
@@ -34,13 +47,13 @@ export const AuroraBackground = ({
             dark:[background-image:var(--dark-gradient),var(--aurora)]
             [background-size:300%,_200%]
             [background-position:50%_50%,50%_50%]
-            filter blur-[10px] invert dark:invert-0
+            invert dark:invert-0
             after:content-[""] after:absolute after:inset-0 after:[background-image:var(--white-gradient),var(--aurora)] 
             after:dark:[background-image:var(--dark-gradient),var(--aurora)]
             after:[background-size:200%,_100%] 
-            after:animate-aurora after:[background-attachment:fixed] after:mix-blend-difference
+            after:animate-aurora group-data-[paused=true]:after:[animation-play-state:paused] after:mix-blend-difference
             pointer-events-none
-            absolute -inset-[10px] opacity-50 will-change-transform`,
+            absolute -inset-[10px] opacity-50 [contain:paint]`,
 
               showRadialGradient &&
                 `[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]`

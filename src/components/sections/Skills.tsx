@@ -5,8 +5,8 @@ import { education, skills } from "@/data/portfolio";
 
 export function Skills() {
   return (
-    <section id="skills" className="container py-20 md:py-28">
-      <SectionHeading index="04 — Skills & education" title="What I work with" />
+    <section className="container pb-20 pt-4 md:pb-28">
+      <SectionHeading index="Skills & education" title="What I work with" />
       <div className="grid gap-5 md:grid-cols-3">
         {skills.map((s, i) => (
           <Reveal key={s.group} delay={i * 0.08}>

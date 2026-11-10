@@ -4,8 +4,8 @@ import { experience } from "@/data/portfolio";
 
 export function Experience() {
   return (
-    <section id="experience" className="container py-20 md:py-28">
-      <SectionHeading index="02 — Experience" title="Where I've worked and led" />
+    <section className="container py-16 md:py-20">
+      <SectionHeading index="Experience" title="Where I've worked and led" />
       <ol className="relative space-y-10 border-l border-border pl-8 md:pl-10">
         {experience.map((e, i) => (
           <li key={e.role} className="relative">

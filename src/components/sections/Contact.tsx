@@ -6,12 +6,12 @@ import { profile } from "@/data/portfolio";
 
 export function Contact() {
   return (
-    <section id="contact" className="container py-20 md:py-28">
+    <section className="container pb-20 pt-32 md:pb-28 md:pt-40">
       <Reveal>
         <div className="relative overflow-hidden rounded-3xl border bg-zinc-950 px-6 py-16 text-center text-white md:px-16 md:py-24">
-          <div className="pointer-events-none absolute -inset-[10px] opacity-60 blur-2xl [background-image:repeating-linear-gradient(100deg,var(--blue-500)_10%,var(--indigo-300)_15%,var(--blue-300)_20%,var(--violet-200)_25%,var(--blue-400)_30%)] [background-size:200%] animate-aurora [mask-image:radial-gradient(ellipse_at_50%_120%,black_20%,transparent_70%)]" />
+          <div className="pointer-events-none absolute inset-0 [background-image:radial-gradient(ellipse_at_50%_120%,rgba(96,165,250,0.55),rgba(129,140,248,0.25)_45%,transparent_70%)]" />
           <div className="relative">
-            <p className="font-mono text-sm text-blue-300">05 — What's next?</p>
+            <p className="font-mono text-sm text-blue-300">Contact</p>
             <h2 className="mt-3 text-4xl font-bold tracking-tight md:text-6xl">Let's build something.</h2>
             <p className="mx-auto mt-5 max-w-xl text-lg text-zinc-300">
               I'm looking for software engineering internships and co-op roles. If you have a role, a question, or just

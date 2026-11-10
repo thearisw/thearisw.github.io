@@ -32,8 +32,14 @@ const config: Config = {
       },
       animation: {
         aurora: "aurora 60s linear infinite",
+        // GPU-friendly version of the aurora: slides a wide layer with transform instead of repainting a gradient.
+        "aurora-slide": "aurora-slide 45s ease-in-out infinite alternate",
       },
       keyframes: {
+        "aurora-slide": {
+          from: { transform: "translate3d(0,0,0)" },
+          to: { transform: "translate3d(-50%,0,0)" },
+        },
         aurora: {
           from: { backgroundPosition: "50% 50%, 50% 50%" },
           to: { backgroundPosition: "350% 50%, 350% 50%" },

@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowDown, ArrowRight, Download, Mail, MapPin } from "lucide-react";
+import { ArrowRight, FileText, Mail, MapPin } from "lucide-react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
-import { ButtonLink } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
 import { profile } from "@/data/portfolio";
 
@@ -29,12 +30,12 @@ export function Hero() {
         <p className="max-w-2xl text-base text-zinc-600 dark:text-zinc-400 md:text-lg">{profile.intro}</p>
 
         <div className="mt-2 flex flex-wrap items-center justify-center gap-3">
-          <ButtonLink href="#projects" size="lg">
+          <Link to="/projects" className={buttonVariants({ size: "lg" })}>
             See my work <ArrowRight />
-          </ButtonLink>
-          <ButtonLink href={profile.resume} target="_blank" rel="noopener" variant="outline" size="lg" className="text-zinc-900 dark:text-white">
-            <Download /> Resume
-          </ButtonLink>
+          </Link>
+          <Link to="/resume" className={buttonVariants({ variant: "outline", size: "lg", className: "text-zinc-900 dark:text-white" })}>
+            <FileText /> Resume
+          </Link>
         </div>
 
         <div className="flex items-center gap-5 text-zinc-600 dark:text-zinc-400">
@@ -56,9 +57,6 @@ export function Hero() {
         </div>
       </motion.div>
 
-      <a href="#about" aria-label="Scroll to About" className="absolute bottom-8 z-10 text-zinc-500 dark:text-zinc-400">
-        <ArrowDown className="h-5 w-5 animate-bounce" />
-      </a>
     </AuroraBackground>
   );
 }

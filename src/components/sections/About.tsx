@@ -4,8 +4,8 @@ import { about, highlights, profile } from "@/data/portfolio";
 export function About() {
   const initials = profile.name.split(" ").map((p) => p[0]).join("");
   return (
-    <section id="about" className="container py-20 md:py-28">
-      <SectionHeading index="01 — About" title="A bit about me" />
+    <section className="container pb-20 pt-32 md:pb-28 md:pt-40">
+      <SectionHeading index="About" title="A bit about me" />
       <div className="grid items-start gap-12 md:grid-cols-[1.4fr_1fr]">
         <Reveal className="space-y-5 text-lg leading-relaxed text-muted-foreground">
           {about.map((p) => (
