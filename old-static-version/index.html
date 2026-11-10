@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aris Wong · Software Developer</title>
+  <meta name="description" content="Aris Wong is a Computer Science student and Dean's Scholar at UBC building robotics, game, AI, and cryptography projects. Looking for software engineering internships and co-op roles.">
+  <meta property="og:title" content="Aris Wong · Software Developer">
+  <meta property="og:description" content="UBC Computer Science student. Robotics, games, AI pipelines, and chaos-based cryptography.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ariswong.dev">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try { const t = localStorage.getItem('theme'); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#top" class="logo">ariswong<span class="accent">.dev</span></a>
+      <nav aria-label="Main">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <span></span><span></span>
+        </button>
+        <ul id="nav-links" class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="assets/resume.pdf" class="btn btn-small" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero container">
+      <p class="eyebrow mono">Hi, my name is</p>
+      <h1>Aris Wong.</h1>
+      <h2 class="hero-sub">I build robots, games, and the code behind them.</h2>
+      <p class="hero-text">
+        I'm a Computer Science student and <strong>Dean's Scholar at the University of British Columbia</strong>
+        in Vancouver. I've programmed award-winning competition robots, built AI-powered content pipelines,
+        and shipped games. I'm looking for <strong>software engineering internships and co-op roles</strong>.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn">See my work</a>
+        <a href="assets/resume.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download resume</a>
+      </div>
+      <ul class="social">
+        <li><a href="https://github.com/thearisw" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.62 1.58.23 2.75.11 3.04.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+        </a></li>
+        <!-- EDIT: add your LinkedIn here when ready (copy the GitHub <li> above and change the link + icon) -->
+        <li><a href="mailto:thearisw@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+        </a></li>
+      </ul>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section container">
+      <h2 class="section-title"><span class="mono accent">01.</span> About me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            I started out writing Discord bots back in 2019 and haven't stopped building since. In high school I
+            spent three years designing and programming VEX robots, which took my team to the
+            <strong>VEX World Championship</strong>, where we won the <strong>Create Award</strong>, and to
+            <strong>#1 in Alberta skills</strong>.
+          </p>
+          <p>
+            Now I'm studying Computer Science at UBC with a 91% average. Outside of class I'm working on
+            ChaoCrypt, an encryption scheme built on chaotic n-body simulations, an AI film pipeline that turns scripts
+            into 3D scenes, and a handful of games.
+          </p>
+          <ul class="highlights">
+            <li><span class="hl-num">🏆</span><span><strong>Create Award</strong><br><span class="muted">VEX World Championship 2025</span></span></li>
+            <li><span class="hl-num">#1</span><span><strong>Alberta Skills</strong><br><span class="muted">Provincial Champion 2025</span></span></li>
+            <li><span class="hl-num">91%</span><span><strong>Dean's Scholar</strong><br><span class="muted">UBC Computer Science</span></span></li>
+          </ul>
+        </div>
+        <div class="about-photo">
+          <!-- EDIT: replace with your photo, e.g. save it as assets/headshot.jpg and change src below -->
+          <img src="assets/headshot.svg" alt="Photo of Aris Wong" width="300" height="300">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="section container">
+      <h2 class="section-title"><span class="mono accent">02.</span> Experience</h2>
+      <ol class="timeline">
+        <li class="timeline-item">
+          <div class="timeline-date mono">Jul 2026 – Aug 2026</div>
+          <div class="timeline-body">
+            <h3>Tech Specialist / Camp Counsellor · <span class="accent">Camp STEAM Canada</span></h3>
+            <ul>
+              <li>Taught campers block-based coding with Minecraft Education, LEGO Spike, and micro:bit at an engineering summer camp.</li>
+              <li>Managed and troubleshot camp hardware including 3D printers and Chromebooks for campers and staff.</li>
+              <li>Worked with other counsellors to design better hands-on learning experiences.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-date mono">Feb 2026</div>
+          <div class="timeline-body">
+            <h3>Hackathon Participant · <span class="accent">Hack the Coast</span></h3>
+            <ul>
+              <li>Built a social awareness game in GameMaker advocating for homeless shelter and food bank funding (UBC Science Undergraduate Society).</li>
+              <li>Combined hand-written GML with AI-assisted code to speed up development, debug complex logic, and tune gameplay.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-date mono">Sep 2022 – Jun 2025</div>
+          <div class="timeline-body">
+            <h3>Robotics Designer &amp; Programmer · <span class="accent">VEX Robotics Competition</span></h3>
+            <ul>
+              <li>Programmed autonomous routing in C++ with PROS, using PID control to improve runtime by 50%.</li>
+              <li>Designed, prototyped, and built robots for timed scoring tasks under strict hardware constraints.</li>
+              <li>Won 5 awards in 2025, including the <strong>World Championship Create Award</strong> and <strong>Provincial Champion Skills Award</strong> (#1 in Alberta).</li>
+            </ul>
+          </div>
+        </li>
+        <li class="timeline-item">
+          <div class="timeline-date mono">May 2023 – Jun 2025</div>
+          <div class="timeline-body">
+            <h3>Robotics Club Executive · <span class="accent">Western Canada High School</span></h3>
+            <ul>
+              <li>Mentored 50 members across 8 teams in mechanical, software, and structural engineering.</li>
+              <li>Led teams to 10+ provincial and global tournaments, coordinating travel and logistics.</li>
+              <li>Organized and maintained the club's parts and equipment inventory.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section container">
+      <h2 class="section-title"><span class="mono accent">03.</span> Projects</h2>
+      <div class="project-grid">
+        <!-- EDIT: to add a GitHub/demo link to a project, put inside .card-top:
+             <div class="card-links"><a href="https://github.com/thearisw/REPO" target="_blank" rel="noopener">Code</a></div> -->
+        <article class="card">
+          <div class="card-top"><span class="card-kind mono">Cryptography</span></div>
+          <h3>ChaoCrypt</h3>
+          <p>An encryption scheme based on chaos theory. It uses n-body gravitational simulations, which are extremely sensitive to their starting conditions, as the basis for encrypting data.</p>
+          <ul class="tags mono"><li>Chaos theory</li><li>N-body simulation</li><li>Encryption</li></ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top"><span class="card-kind mono">AI · 3D graphics</span></div>
+          <h3>Siratonin Films</h3>
+          <p>An AI-powered production pipeline that turns scripts into 3D sets in three.js. Shots are composed in JavaScript and tuned for performance, with ElevenLabs voiceover and an automatic caption generator for short-form videos.</p>
+          <ul class="tags mono"><li>JavaScript</li><li>three.js</li><li>ElevenLabs API</li><li>AI</li></ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top"><span class="card-kind mono">Machine learning</span></div>
+          <h3>WNBA Predictor</h3>
+          <p>A KNN classification model that forecasts WNBA standings from win percentages. I cleaned, transformed, and analyzed the CSV data with the tidyverse. Built for UBC DSCI 100.</p>
+          <ul class="tags mono"><li>R</li><li>tidyverse</li><li>Jupyter</li><li>KNN</li></ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top"><span class="card-kind mono">Bot · APIs</span></div>
+          <h3>Monke Discord Bot</h3>
+          <p>A Discord bot with 50+ economy, entertainment, and moderation commands that simplify rule enforcement for server admins. Built with object-oriented Python on the Discord API.</p>
+          <ul class="tags mono"><li>Python</li><li>discord.py</li><li>Nextcord</li><li>Node.js</li><li>JSON</li></ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top"><span class="card-kind mono">Game dev</span></div>
+          <h3>Bossfight Game</h3>
+          <p>A boss-fight action game built in GameMaker, focused on smooth, responsive movement and combat mechanics.</p>
+          <ul class="tags mono"><li>GameMaker</li><li>GML</li></ul>
+        </article>
+
+        <article class="card">
+          <div class="card-top"><span class="card-kind mono">Game dev</span></div>
+          <h3>Roblox Game</h3>
+          <p>A Roblox game in active development, built with AI-assisted development using Claude to design systems, write scripts, and iterate quickly.</p>
+          <ul class="tags mono"><li>Roblox Studio</li><li>Luau</li><li>AI-assisted dev</li></ul>
+        </article>
+      </div>
+      <p class="more"><a href="https://github.com/thearisw" target="_blank" rel="noopener" class="link mono">See more on GitHub →</a></p>
+    </section>
+
+    <!-- ============ SKILLS + EDUCATION ============ -->
+    <section id="skills" class="section container">
+      <h2 class="section-title"><span class="mono accent">04.</span> Skills &amp; education</h2>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3>Languages</h3>
+          <ul class="tags mono"><li>Java</li><li>Python</li><li>C++</li><li>C#</li><li>JavaScript</li><li>R</li><li>GML</li><li>Racket</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Frameworks &amp; libraries</h3>
+          <ul class="tags mono"><li>three.js</li><li>Node.js</li><li>PROS</li><li>tidyverse</li><li>discord.py</li><li>Nextcord</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>Tools &amp; platforms</h3>
+          <ul class="tags mono"><li>Git / GitHub</li><li>VS Code</li><li>Jupyter</li><li>GameMaker</li><li>Roblox Studio</li><li>VEX V5</li><li>3D printing</li></ul>
+        </div>
+      </div>
+
+      <div class="edu card">
+        <div>
+          <h3>University of British Columbia</h3>
+          <p>Bachelor of Science in Computer Science · 91% average · Dean's Scholar</p>
+          <p class="muted">Coursework: Computer Systems, Software Construction (Java), Data Structures &amp; Algorithms (C++), Data Science (R)</p>
+        </div>
+        <div class="timeline-date mono">Sep 2025 – May 2030</div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section container contact">
+      <p class="mono accent">05. What's next?</p>
+      <h2>Get in touch</h2>
+      <p>
+        I'm looking for software engineering internships and co-op opportunities. If you have a role,
+        a question, or just want to talk robotics or games, my inbox is open.
+      </p>
+      <a href="mailto:thearisw@gmail.com" class="btn">Say hello</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="mono">Designed &amp; built by Aris Wong · <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
