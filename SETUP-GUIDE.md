@@ -7,14 +7,12 @@ GitHub builds it and hosts it free on **GitHub Pages** each time you push.
 Portfolio/
 ├── src/
 │   ├── data/portfolio.ts        ← ALL your content (text, projects, links). Edit this file.
-│   ├── pages/                   ← one file per tab: Home, About, Projects, Resume, Contact
 │   ├── components/
-│   │   ├── layout/               ← top-right tab bar (Navbar) + page wrapper
 │   │   ├── ui/                   ← shadcn-style reusable components
 │   │   │   ├── aurora-background.tsx   (the animated hero background)
 │   │   │   ├── demo.tsx                (the component author's demo, not used on the site)
 │   │   │   ├── button.tsx, badge.tsx
-│   │   ├── sections/             ← Navbar, Hero, About, Experience, Projects, Skills, Contact
+│   │   ├── sections/             ← Hero, Awards, Projects, Contact
 │   │   └── icons.tsx             ← GitHub / LinkedIn logos
 │   ├── lib/utils.ts              ← the cn() helper shadcn components use
 │   └── index.css                 ← Tailwind + light/dark theme colors
@@ -56,8 +54,8 @@ Open `src/data/portfolio.ts`. Everything on the site comes from there:
 - **LinkedIn**: paste your URL into `linkedin: ""` and the icon shows up automatically.
 - **Project links**: add `code: "https://github.com/thearisw/REPO"` and/or `demo: "https://..."` to any project.
 - **Add a project**: copy one `{ ... }` block in `projects`. Icons come from https://lucide.dev/icons (import the name at the top of the file).
-- **Resume**: replace `public/resume.pdf` (keep the name).
-- **Photo**: put `headshot.jpg` in `public/`, then follow the `EDIT:` comment in `src/components/sections/About.tsx`.
+- **Resume**: replace `public/resume.pdf` (keep the name). The Resume tab shows a live preview of that file, so updating the PDF updates the page.
+- **Awards on the home page**: edit the `awards` list in `src/data/portfolio.ts`.
 
 ---
 
@@ -111,12 +109,6 @@ DNS takes minutes to a few hours. When **Settings → Pages** says *DNS check su
 **Profile Settings → Pages → Add a domain**, then add the TXT record it gives you. This stops anyone else from claiming your domain on GitHub Pages.
 
 ---
-
-## How the tabs and direct links work
-The tabs (`/about`, `/projects`, `/resume`, `/contact`) are real URLs handled by React Router. GitHub Pages only knows about `index.html`, so `npm run build` also copies it to `404.html`. When someone opens `ariswong.dev/projects` directly, GitHub serves that file and the site then shows the right page. To add a tab, create a page in `src/pages/`, add a `<Route>` in `src/App.tsx`, and add it to the `tabs` list in `src/components/layout/Navbar.tsx`.
-
-## Theme
-The site opens in light mode. Visitors can switch to dark with the moon icon and the site remembers their choice.
 
 ## Updating the site later
 ```powershell

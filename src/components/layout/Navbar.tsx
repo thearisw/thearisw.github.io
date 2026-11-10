@@ -5,7 +5,6 @@ import { profile } from "@/data/portfolio";
 import { cn } from "@/lib/utils";
 
 const tabs = [
-  { to: "/about", label: "About" },
   { to: "/projects", label: "Projects" },
   { to: "/resume", label: "Resume" },
   { to: "/contact", label: "Contact" },
