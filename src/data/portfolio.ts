@@ -7,21 +7,22 @@ import { Award, Bot, Clapperboard, Gamepad2, KeyRound, LineChart, Medal, Swords,
 export const profile = {
   name: "Aris Wong",
   domain: "ariswong.dev",
-  tagline: "I build robots, games, and the code behind them.",
+  tagline: "Robotics | AI Pipeline Content Creation | Game Developer",
   intro:
-    "Computer Science student and Dean's Scholar at the University of British Columbia. I've programmed award-winning competition robots, built AI-powered content pipelines, and shipped games.",
-  lookingFor: "Open to SWE internships & co-op",
+    `Computer Science student at the University of British Columbia.
+    Programmed award-winning competition robots and built AI-powered content pipelines.`,
+  lookingFor: "Open for Internships",
   location: "Vancouver, BC",
   email: "thearisw@gmail.com",
   github: "https://github.com/thearisw",
-  linkedin: "", // EDIT: paste your LinkedIn URL here and the icon appears automatically
+  linkedin: "https://www.linkedin.com/in/-aris-wong",
   resume: "resume.pdf", // lives in /public
 };
 
 export const awards: { title: string; detail: string; icon: LucideIcon }[] = [
-  { title: "Create Award", detail: "VEX Robotics World Championship, 2025", icon: Trophy },
+  { title: "Divisional Create Award", detail: "VEX Robotics World Championship, 2025", icon: Trophy },
   { title: "#1 Skills in Alberta", detail: "Provincial Skills Champion, 2025", icon: Medal },
-  { title: "3 more provincial awards", detail: "VEX Robotics, Alberta", icon: Award },
+  { title: "3+ provincial awards", detail: "VEX Robotics, 2022-2025", icon: Award },
 ];
 
 export type Project = {
@@ -45,6 +46,7 @@ export const projects: Project[] = [
     tags: ["Chaos theory", "N-body simulation", "Encryption"],
     icon: KeyRound,
     gradient: "from-violet-500 via-indigo-500 to-blue-500",
+    code: "https://github.com/thearisw/Chaocrypt",
     featured: true,
   },
   {
