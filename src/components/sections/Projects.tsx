@@ -11,7 +11,7 @@ export function Projects() {
     <section className="container pb-20 pt-32 md:pb-28 md:pt-40">
       <SectionHeading
         index="Projects"
-        title="Things I've built"
+        title="My Favourite Projects"
         subtitle="From chaos-theory cryptography to AI film pipelines and games. More on my GitHub."
       />
       <div className="grid gap-5 md:grid-cols-2">

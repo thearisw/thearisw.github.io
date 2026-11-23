@@ -19,10 +19,10 @@ export const profile = {
   resume: "resume.pdf", // lives in /public
 };
 
-export const awards: { title: string; detail: string; icon: LucideIcon }[] = [
-  { title: "Divisional Create Award", detail: "VEX Robotics World Championship, 2025", icon: Trophy },
-  { title: "#1 Skills in Alberta", detail: "Provincial Skills Champion, 2025", icon: Medal },
-  { title: "3+ provincial awards", detail: "VEX Robotics, 2022-2025", icon: Award },
+export const awards: { title: string; detail: string; icon: LucideIcon; image?: string }[] = [
+  { title: "World Championship Create Award", detail: "VEX Robotics World Championship, 2025", icon: Trophy, image: "awards/worlds-standing.jpg" },
+  { title: "#1 Skills in Alberta", detail: "Provincial Skills Champion, 2025", icon: Medal, image: "awards/skills-alberta.jpg" }, // image lives in /public
+  { title: "3+ provincial awards", detail: "VEX Robotics, 2022-2025", icon: Award, image: "awards/worlds-game.jpg" },
 ];
 
 export type Project = {
