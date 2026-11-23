@@ -69,7 +69,7 @@ export const projects: Project[] = [
     gradient: "from-orange-400 via-rose-400 to-pink-500",
   },
   {
-    title: "Monke Discord Bot",
+    title: "MONKE",
     kind: "Bot · APIs",
     description:
       "A Discord bot with 50+ economy, entertainment, and moderation commands that simplify rule enforcement for server admins. Built with object-oriented Python on the Discord API.",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     gradient: "from-indigo-500 via-blue-500 to-sky-400",
   },
   {
-    title: "Bossfight Game",
+    title: "Arnykyan",
     kind: "Game dev",
     description:
       "A boss-fight action game built in GameMaker, focused on smooth, responsive movement and combat mechanics.",
@@ -87,7 +87,7 @@ export const projects: Project[] = [
     gradient: "from-red-500 via-orange-500 to-amber-400",
   },
   {
-    title: "Roblox Game",
+    title: "Super Baiters",
     kind: "Game dev",
     description:
       "A Roblox game in active development, built with AI-assisted development using Claude to design systems, write scripts, and iterate quickly.",
