@@ -2,7 +2,7 @@
 //  All of the site's content lives in this file.
 //  Edit text here; you shouldn't need to touch the components.
 // ─────────────────────────────────────────────────────────────
-import { Award, Bot, Clapperboard, Gamepad2, KeyRound, LineChart, Medal, Swords, Trophy, type LucideIcon } from "lucide-react";
+import { Award, Bot, Clapperboard, Gamepad2, KeyRound, LineChart, Medal, Swords, Trophy, Zap, type LucideIcon } from "lucide-react";
 
 export const profile = {
   name: "Aris Wong",
@@ -58,6 +58,17 @@ export const projects: Project[] = [
     icon: Clapperboard,
     gradient: "from-blue-500 via-cyan-400 to-teal-400",
     featured: true,
+  },
+  {
+    title: "RedSpark",
+    kind: "AI � Simulation",
+    description:
+      "Trains AI to design redstone-style logic circuits from a truth table. A tick-accurate simulator in Python feeds a genetic algorithm and a PPO agent, and a three.js viewer shows circuits evolving live. The demo runs the same Python in your browser through WebAssembly.",
+    tags: ["Python", "NumPy", "Genetic algorithms", "PyTorch", "three.js", "Pyodide"],
+    icon: Zap,
+    gradient: "from-red-600 via-rose-500 to-orange-400",
+    code: "https://github.com/thearisw/RedSpark",
+    demo: "https://redspark.ariswong.dev",
   },
   {
     title: "WNBA Predictor",
