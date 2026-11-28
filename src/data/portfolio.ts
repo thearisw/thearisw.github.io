@@ -32,6 +32,7 @@ export type Project = {
   tags: string[];
   icon: LucideIcon;
   gradient: string; // Tailwind gradient classes for the card header
+  image?: string; // optional header background, lives in /public
   code?: string; // EDIT: GitHub repo URL
   demo?: string; // EDIT: live demo URL
   featured?: boolean;
@@ -67,6 +68,7 @@ export const projects: Project[] = [
     tags: ["Python", "NumPy", "Genetic algorithms", "PyTorch", "three.js", "Pyodide"],
     icon: Zap,
     gradient: "from-red-600 via-rose-500 to-orange-400",
+    image: "projects/redspark.jpg",
     code: "https://github.com/thearisw/RedSpark",
     demo: "https://redspark.ariswong.dev",
   },

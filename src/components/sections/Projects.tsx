@@ -19,8 +19,23 @@ export function Projects() {
           <Reveal key={p.title} delay={(i % 3) * 0.08}>
             <article className="group relative flex h-full flex-col overflow-hidden rounded-2xl border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5">
               <div className={cn("relative h-32 overflow-hidden bg-gradient-to-br", p.featured && "h-40", p.gradient)}>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.35),transparent_60%)]" />
-                <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,.5)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.5)_1px,transparent_1px)] [background-size:24px_24px]" />
+                {p.image ? (
+                  <>
+                    <img
+                      src={`/${p.image}`}
+                      alt=""
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    {/* Dark overlay keeps the icon and label readable */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/30" />
+                  </>
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.35),transparent_60%)]" />
+                    <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(rgba(255,255,255,.5)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,.5)_1px,transparent_1px)] [background-size:24px_24px]" />
+                  </>
+                )}
                 <p.icon className="absolute bottom-4 left-5 h-10 w-10 text-white drop-shadow transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-6" />
                 <span className="absolute right-4 top-4 rounded-full bg-black/20 px-2.5 py-1 font-mono text-[11px] uppercase tracking-wider text-white backdrop-blur">
                   {p.kind}
